@@ -65,7 +65,7 @@ if ($generatePDF) {
             $doc = $word.Documents.Open($file.FullName, $false, $true)
             $pdfPath = Join-Path $pdfOutput ($file.BaseName + ".pdf")
             $doc.SaveAs($pdfPath, 17)  # 17 = wdFormatPDF
-            $doc.Close()
+            $doc.Close(0)
             Write-Host "Converted $($file.Name) to PDF"
         } catch {
             Write-Host "Error processing file: $($file.FullName)" -ForegroundColor Red
