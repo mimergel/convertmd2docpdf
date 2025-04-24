@@ -28,7 +28,7 @@ Get-ChildItem -Path $sourceFolder -Include *.doc, *.docx -Recurse | Where-Object
         $doc = $word.Documents.Open($file.FullName, $false, $true)
         $pdfPath = Join-Path $targetFolder ($file.BaseName + ".pdf")
         $doc.SaveAs($pdfPath, 17)  # 17 = wdFormatPDF
-        $doc.Close()
+        $doc.Close(0)
     } catch {
         Write-Host "Error processing file: $($file.FullName)" -ForegroundColor Red
         Write-Host $_.Exception.Message
