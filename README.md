@@ -1,4 +1,4 @@
-# Convert MD files to Word and PDF docuements
+# Convert MD files to Word and PDF documents
 Converts MD files to word including images in a to be specified subfolder and optionally creates PDF from the word documents
 
 ## Prerequisites
