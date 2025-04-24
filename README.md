@@ -10,7 +10,7 @@ Enter the folder path containing markdown files: [folder to MD files, e.g. md_fi
 
 Do you want to also generate PDF files from Word documents? (Yes/No): Yes
 
-Enter the name of the media or assets folder containing images: assets
+Enter the name of the media or assets folder containing images: [subfolder name within the MD files folder, e.g. assets]
 
 Converted filename1.md to C:\Users\mimergel\OneDrive - filename1.docx (with embedded images)
 
