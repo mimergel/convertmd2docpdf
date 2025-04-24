@@ -35,8 +35,13 @@ if ($generatePDF) {
     }
 }
 
-# Create the media folder path
-$mediaFolder = Join-Path -Path $markdownFolder -ChildPath $mediaFolderName
+# Modify the media folder path resolution to handle relative paths
+$mediaFolder = if (Test-Path -Path $mediaFolderName) {
+    Resolve-Path $mediaFolderName | Select-Object -ExpandProperty Path
+} else {
+    Join-Path -Path (Get-Item $markdownFolder).Parent.FullName -ChildPath $mediaFolderName
+}
+
 if (-Not (Test-Path -Path $mediaFolder)) {
     Write-Host "Could not find the media folder. Please ensure it exists." -ForegroundColor Red
     exit
@@ -65,7 +70,7 @@ if ($generatePDF) {
             $doc = $word.Documents.Open($file.FullName, $false, $true)
             $pdfPath = Join-Path $pdfOutput ($file.BaseName + ".pdf")
             $doc.SaveAs($pdfPath, 17)  # 17 = wdFormatPDF
-            $doc.Close(0)
+            $doc.Close()
             Write-Host "Converted $($file.Name) to PDF"
         } catch {
             Write-Host "Error processing file: $($file.FullName)" -ForegroundColor Red
