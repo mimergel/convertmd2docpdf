@@ -16,10 +16,10 @@ Converts MD files to word including images in a to be specified subfolder and op
 2. **Navigate** to the folder where you cloned or unzipped the repository.
 
 
-## Running the script
+## Running the scripts
 
 1. **Open PowerShell** in the repository folder.
-2. **Run** the script 
+2. **Run** the script to convert MD to Word & PDF
    ```powershell
    .\convertmd2docpdf.ps1
    ```
@@ -33,6 +33,13 @@ Converts MD files to word including images in a to be specified subfolder and op
    Converted filename1.docx to PDF
    Converted filename2.docx to PDF
    ```
+
+4. **Run** the script to convert Word to PDF
+   ```powershell
+   .\convertword2pdf.ps1
+   Enter the folder path containing Word files: [folder containing the word documents, e.g. word_files]
+   ```
+
 ## Troubleshooting
 
 - If `pandoc` is not recognized, ensure Pandoc is installed and the install location is in your PATH.
