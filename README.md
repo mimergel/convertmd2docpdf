@@ -4,7 +4,7 @@ Converts md files to word including images in a to be specified subfolder and op
 # Running the script
 
 ```
-.\ConvertMarkdowntoWordplusPDF.ps1
+.\convertmd2docpdf.ps1
 
 Enter the folder path containing markdown files: [folder to MD files, e.g. md_files]
 
