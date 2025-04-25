@@ -3,7 +3,7 @@ Converts MD files to word including images in a to be specified subfolder and op
 
 ## Prerequisites
 
-1. **PowerShell 5.1 or later**.
+1. **PowerShell 7.5.0 or later**.
 2. [**Pandoc**](https://pandoc.org/installing.html) (must be installed and accessible in your system's PATH).
 3. **Microsoft Word**.
 
@@ -18,7 +18,7 @@ Converts MD files to word including images in a to be specified subfolder and op
 
 ## Running the scripts
 
-1. **Open PowerShell** in the repository folder.
+1. **Open PowerShell 7** in the repository folder.
 2. **Run** the script to convert MD to Word & PDF
    ```powershell
    .\convertmd2docpdf.ps1
